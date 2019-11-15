@@ -8,11 +8,12 @@ import javax.persistence.Column;
 
 @Entity
 public class User {
-	@Id
-	@GeneratedValue	
+	//@GeneratedValue	
+	@Id		
 	private Long id;
 	private String lastName;
 	private String firstName;
+	private String userId;// email addr or alphanumeric
 	
 	public User() {		
 	}
@@ -43,6 +44,12 @@ public class User {
 	}
 	public void setLastName(String lastName) {
       this.lastName = lastName;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
    @Override
    public String toString() {
